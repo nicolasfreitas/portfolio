@@ -21,6 +21,8 @@ header {
   background-color: #ddd; /* Slightly darker gray for header */
   padding: 10px 0;
   border-bottom: 2px solid #aaa; /* A simple border */
+  position: relative; /* Needed for absolute positioning of ASCII art */
+  overflow: hidden; /* Added to ensure content stays within header bounds */
 }
 
 header .container {
@@ -50,6 +52,23 @@ header nav a {
   color: #333;
   font-weight: bold;
 }
+
+/* Styles for the ASCII name */
+#ascii-name {
+  position: absolute;
+  top: 10px; /* Adjust as needed for vertical position */
+  right: 20px; /* Adjust as needed for horizontal position */
+  font-size: 0.7em; /* Make it smaller */
+  line-height: 0.8; /* Reduce line height for compact ASCII */
+  color: #666; /* A slightly softer color */
+  opacity: 0.8; /* Slightly transparent */
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); /* Initial state for animation */
+  transform-origin: center; /* Added to ensure rotation around its center */
+  transition: transform 0.1s linear; /* Smooth transition for animation */
+  white-space: pre; /* Preserve whitespace for ASCII art */
+  text-align: right; /* Align text to the right within its container */
+}
+
 
 #hero {
   background-color: #e0e0e0; /* Another shade of gray */
