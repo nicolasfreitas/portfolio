@@ -111,8 +111,8 @@
         <div class="container">
             <h2>Get in Touch</h2>
             <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
-            <p>Email: <span id="email-contact"></span></p>
-            <p>Phone: <span id="phone-contact"></span></p>
+            <p>Email: <span class="rev email"></span></p>
+            <p>Phone: <span class="rev phone"></span></p>
             <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile (Please update)</a></p>
             <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername (Please update)</a></p>
         </div>
@@ -125,27 +125,8 @@
     </footer>
 
     <script>
-        // JavaScript for email obfuscation to protect from bots
+        // JavaScript for ASCII name animation (spinning in all axes, no translation)
         document.addEventListener('DOMContentLoaded', function() {
-            var user = 'nicolasvista';
-            var domain = 'gmail.com';
-            var emailAddress = user + '@' + domain;
-            var emailLink = document.createElement('a');
-            emailLink.href = 'mailto:' + emailAddress;
-            emailLink.textContent = emailAddress;
-            document.getElementById('email-contact').appendChild(emailLink);
-
-            // JavaScript for phone number obfuscation to protect from bots
-            var part1 = '+44';
-            var part2 = '7447';
-            var part3 = '053572';
-            var phoneNumber = part1 + ' ' + part2 + ' ' + part3;
-            var phoneLink = document.createElement('a');
-            phoneLink.href = 'tel:' + phoneNumber.replace(/\s/g, ''); // Remove spaces for tel: link
-            phoneLink.textContent = phoneNumber;
-            document.getElementById('phone-contact').appendChild(phoneLink);
-
-            // JavaScript for ASCII name animation (spinning in all axes, no translation)
             const asciiName = document.getElementById('ascii-name');
             let rotationX = 0;
             let rotationY = 0;
