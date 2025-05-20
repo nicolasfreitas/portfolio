@@ -64,7 +64,7 @@ header nav a {
   opacity: 0.8; /* Slightly transparent */
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); /* Initial state for animation */
   transform-origin: center; /* Added to ensure rotation around its center */
-  transition: transform 0.1s linear; /* Smooth transition for animation */
+  /* Removed transition as it's not needed with requestAnimationFrame for continuous animation */
   white-space: pre; /* Preserve whitespace for ASCII art */
   text-align: right; /* Align text to the right within its container */
 }
@@ -117,4 +117,28 @@ footer {
   color: #fff;
   text-align: center;
   padding: 20px 0;
+}
+
+/* CSS Obfuscation for Email and Phone */
+span.rev {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+
+span.rev.email:before {
+  /* This will be the last part of the displayed email (reversed) */
+  content: "moc.liamg"; /* reversed "gmail.com" */
+}
+span.rev.email:after {
+  /* This will be the first part of the displayed email (reversed) */
+  content: "@atsivsalocin"; /* reversed "nicolasvista@" */
+}
+
+span.rev.phone:before {
+  /* This will be the last part of the displayed phone (reversed) */
+  content: "275350"; /* reversed "053572" */
+}
+span.rev.phone:after {
+  /* This will be the first part of the displayed phone (reversed) */
+  content: " 7447 44+"; /* reversed "+44 7447 " */
 }
