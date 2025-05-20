@@ -19,6 +19,14 @@
                 </ul>
             </nav>
         </div>
+        <pre id="ascii-name">
+ _   _ _____ _____  _      ___  ___
+| \ | |_   _|  __ \| |    | \ | |
+|  \| | | | | |  \/| |    |  \| |
+| . ` | | | | | __ | |    | . ` |
+| |\  |_| |_| |_\ \| |____| |\  |
+|_| \_|\_____/\____/\_____|_| \_|
+        </pre>
     </header>
 
     <section id="hero">
@@ -136,6 +144,26 @@
             phoneLink.href = 'tel:' + phoneNumber.replace(/\s/g, ''); // Remove spaces for tel: link
             phoneLink.textContent = phoneNumber;
             document.getElementById('phone-contact').appendChild(phoneLink);
+
+            // JavaScript for ASCII name animation (spinning in all axes, no translation)
+            const asciiName = document.getElementById('ascii-name');
+            let rotationX = 0;
+            let rotationY = 0;
+            let rotationZ = 0;
+            const rotationSpeed = 0.5; // Speed of rotation in degrees per frame
+
+            function animateAscii() {
+                rotationX += rotationSpeed * 0.5; // Slower rotation on X
+                rotationY += rotationSpeed;
+                rotationZ += rotationSpeed * 0.7; // Slower rotation on Z
+
+                // Apply only rotation, no translation
+                asciiName.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg) rotateZ(${rotationZ}deg)`;
+                requestAnimationFrame(animateAscii);
+            }
+
+            // Start the animation when the DOM is fully loaded
+            animateAscii();
         });
     </script>
 
