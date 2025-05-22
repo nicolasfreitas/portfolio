@@ -19,14 +19,6 @@
                 </ul>
             </nav>
         </div>
-        <pre id="ascii-name">
- _   _ _____ _____  _      ___  ___
-| \ | |_   _|  __ \| |    | \ | |
-|  \| | | | | |  \/| |    |  \| |
-| . ` | | | | | __ | |    | . ` |
-| |\  |_| |_| |_\ \| |____| |\  |
-|_| \_|\_____/\____/\_____|_| \_|
-        </pre>
     </header>
 
     <section id="hero">
@@ -60,50 +52,40 @@
     <section id="portfolio">
         <div class="container">
             <h2>My Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="project-item">
-                    <img src="https://placehold.co/300x200/cccccc/333333?text=Lavender+Doc" alt="Sutton Council lavender fields documentary">
-                    <h3>Sutton Council Lavender Fields Documentary</h3>
-                    <p>Filmed B-roll and operated 2nd camera on vox pops and interviews, capturing foley with Zoom recorders. Involved several days of shooting a community picking lavender.</p>
-                    <a href="#" target="_blank">View Project (Link N/A)</a>
-                </div>
-
-                <div class="project-item">
-                    <img src="https://placehold.co/300x200/cccccc/333333?text=Gotham+Knights+TikTok" alt="Warner Bros Games - Gotham Knights TikTok campaign">
-                    <h3>Warner Bros Games - Gotham Knights TikTok Campaign</h3>
-                    <p>Produced in a North London studio with green screen, featuring talent in full costume. Coordinated talent and camera crew, ensuring timely shoot and resolving issues.</p>
-                    <a href="#" target="_blank">View Project (Link N/A)</a>
-                </div>
-
-                <div class="project-item">
-                    <img src="https://placehold.co/300x200/cccccc/333333?text=Miles+&+Miles+MV" alt="The Heavy Heavy - Miles & Miles">
-                    <h3>The Heavy Heavy - Miles & Miles Music Video</h3>
-                    <p>Produced and served as camera assistant for this music video filmed around the Kent coast on a minimal budget, achieving a high-budget look through careful location selection.</p>
-                    <a href="#" target="_blank">View Project (Link N/A)</a>
-                </div>
-
-                <div class="project-item">
-                    <img src="https://placehold.co/300x200/cccccc/333333?text=SIGMA+Tour+Visuals" alt="SIGMA Tour visuals & social channels">
-                    <h3>SIGMA Tour Visuals & Social Channels</h3>
-                    <p>Ad-hoc shooting production using Blackmagic 6k, capturing content and vox pops in central London for their upcoming UK tour and new album campaign.</p>
-                    <a href="#" target="_blank">View Project (Link N/A)</a>
-                </div>
-
-                <div class="project-item">
-                    <img src="https://placehold.co/300x200/cccccc/333333?text=Moxy+Marriott" alt="Moxy Marriott Hotel socials campaign">
-                    <h3>Moxy Marriott Hotel Socials Campaign</h3>
-                    <p>Served as camera assistant and gaffer's assistant on a two-day shoot with a fast-paced and evolving brief from the producer.</p>
-                    <a href="#" target="_blank">View Project (Link N/A)</a>
-                </div>
-
-                <div class="project-item">
-                    <img src="https://placehold.co/300x200/cccccc/333333?text=Mermaids+Charity" alt="Mermaids charity social channels campaign">
-                    <h3>Mermaids Charity Social Channels Campaign</h3>
-                    <p>Script supervisor and interviewer for Instagram content featuring multiple LGBTIQA+ persons to promote and drive traffic to their socials.</p>
-                    <a href="#" target="_blank">View Project (Link N/A)</a>
-                </div>
-
-            </div>
+            <table class="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>Project Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sutton Council Lavender Fields Documentary</td>
+                        <td>Filmed B-roll and operated 2nd camera for interviews, capturing foley.</td>
+                    </tr>
+                    <tr>
+                        <td>Warner Bros Games - Gotham Knights TikTok Campaign</td>
+                        <td>Produced green screen shoot with talent in costume; coordinated crew and talent.</td>
+                    </tr>
+                    <tr>
+                        <td>The Heavy Heavy - Miles & Miles Music Video</td>
+                        <td>Produced and served as camera assistant for a low-budget music video with a high-budget look.</td>
+                    </tr>
+                    <tr>
+                        <td>SIGMA Tour Visuals & Social Channels</td>
+                        <td>Ad-hoc shooting for tour visuals and vox pops in central London.</td>
+                    </tr>
+                    <tr>
+                        <td>Moxy Marriott Hotel Socials Campaign</td>
+                        <td>Camera assistant and gaffer's assistant on a fast-paced two-day shoot.</td>
+                    </tr>
+                    <tr>
+                        <td>Mermaids Charity Social Channels Campaign</td>
+                        <td>Script supervisor and interviewer for Instagram content promoting LGBTIQA+ persons.</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
@@ -125,27 +107,7 @@
     </footer>
 
     <script>
-        // JavaScript for ASCII name animation (spinning in all axes, no translation)
-        document.addEventListener('DOMContentLoaded', function() {
-            const asciiName = document.getElementById('ascii-name');
-            let rotationX = 0;
-            let rotationY = 0;
-            let rotationZ = 0;
-            const rotationSpeed = 0.5; // Speed of rotation in degrees per frame
-
-            function animateAscii() {
-                rotationX += rotationSpeed * 0.5; // Slower rotation on X
-                rotationY += rotationSpeed;
-                rotationZ += rotationSpeed * 0.7; // Slower rotation on Z
-
-                // Apply only rotation, no translation
-                asciiName.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg) rotateZ(${rotationZ}deg)`;
-                requestAnimationFrame(animateAscii);
-            }
-
-            // Start the animation when the DOM is fully loaded
-            animateAscii();
-        });
+        // No ASCII animation script here
     </script>
 
 </body>
