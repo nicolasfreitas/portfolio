@@ -53,21 +53,7 @@ header nav a {
   font-weight: bold;
 }
 
-/* Styles for the ASCII name */
-#ascii-name {
-  position: absolute;
-  top: 10px; /* Adjust as needed for vertical position */
-  right: 20px; /* Adjust as needed for horizontal position */
-  font-size: 0.7em; /* Make it smaller */
-  line-height: 0.8; /* Reduce line height for compact ASCII */
-  color: #666; /* A slightly softer color */
-  opacity: 0.8; /* Slightly transparent */
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg); /* Initial state for animation */
-  transform-origin: center; /* Added to ensure rotation around its center */
-  /* Removed transition as it's not needed with requestAnimationFrame for continuous animation */
-  white-space: pre; /* Preserve whitespace for ASCII art */
-  text-align: right; /* Align text to the right within its container */
-}
+/* Styles for the ASCII name have been removed */
 
 
 #hero {
@@ -96,6 +82,28 @@ header nav a {
   padding: 40px 0;
 }
 
+/* New styles for the portfolio table */
+.portfolio-table {
+  width: 100%;
+  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  margin-top: 20px;
+  border: 1px solid #ccc; /* Table border */
+}
+
+.portfolio-table th,
+.portfolio-table td {
+  border: 1px solid #ccc; /* Cell borders */
+  padding: 10px;
+  text-align: left;
+}
+
+.portfolio-table th {
+  background-color: #ddd; /* Header background */
+  font-weight: bold;
+}
+
+/* Remove old grid styles as they are no longer needed */
+/*
 #portfolio .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -103,7 +111,7 @@ header nav a {
 }
 
 .project-item {
-  border: 1px solid #ccc; /* Simple border */
+  border: 1px solid #ccc;
   padding: 10px;
 }
 
@@ -111,6 +119,7 @@ header nav a {
   max-width: 100%;
   height: auto;
 }
+*/
 
 footer {
   background-color: #333;
