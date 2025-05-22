@@ -8,6 +8,7 @@ body {
   line-height: 1.6;
   margin: 0;
   padding: 0;
+  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
 }
 
 .container {
@@ -21,19 +22,28 @@ header {
   background-color: #ddd; /* Slightly darker gray for header */
   padding: 10px 0;
   border-bottom: 2px solid #aaa; /* A simple border */
-  position: relative; /* Needed for absolute positioning of ASCII art */
-  overflow: hidden; /* Added to ensure content stays within header bounds */
+  position: relative;
+  overflow: hidden;
 }
 
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
 header h1 {
   font-size: 2em;
   margin: 0;
+  text-align: center; /* Center the title on small screens */
+  width: 100%; /* Take full width on small screens */
+  padding-bottom: 10px; /* Add some space below the title */
+}
+
+header nav {
+  width: 100%; /* Take full width on small screens */
+  text-align: center; /* Center navigation on small screens */
 }
 
 header nav ul {
@@ -41,23 +51,42 @@ header nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  justify-content: center; /* Center nav items */
+  flex-wrap: wrap; /* Allow nav items to wrap */
 }
 
 header nav ul li {
-  margin-left: 20px;
+  margin: 5px 10px; /* Adjust margin for smaller screens */
 }
 
 header nav a {
   text-decoration: none;
   color: #333;
   font-weight: bold;
+  padding: 5px 0; /* Add padding for better touch targets */
+  display: block; /* Make links block-level for full touch area */
 }
 
-/* Styles for the ASCII name have been removed */
+/* Styles for the ASCII name (removed from HTML, but keeping CSS for completeness if user adds it back) */
+#ascii-name {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 0.7em;
+  line-height: 0.8;
+  color: #666;
+  opacity: 0.8;
+  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  transform-origin: center;
+  white-space: pre;
+  text-align: right;
+  /* Hide by default on smaller screens, can be re-enabled with media query if desired */
+  display: none;
+}
 
 
 #hero {
-  background-color: #e0e0e0; /* Another shade of gray */
+  background-color: #e0e0e0;
   padding: 50px 0;
   text-align: center;
 }
@@ -73,8 +102,8 @@ header nav a {
   background-color: #333;
   color: #fff;
   text-decoration: none;
-  border: 2px solid #333; /* Simple border */
-  border-radius: 0; /* No rounded corners for retro */
+  border: 2px solid #333;
+  border-radius: 0;
   font-weight: bold;
 }
 
@@ -82,44 +111,57 @@ header nav a {
   padding: 40px 0;
 }
 
-/* New styles for the portfolio table */
+/* Styles for the portfolio table */
 .portfolio-table {
   width: 100%;
-  border-collapse: collapse; /* Collapse borders for a cleaner look */
+  border-collapse: collapse;
   margin-top: 20px;
-  border: 1px solid #ccc; /* Table border */
+  border: 1px solid #ccc;
+  display: block; /* Make table a block to allow horizontal scrolling on small screens */
+  overflow-x: auto; /* Enable horizontal scrolling for table on small screens */
+  white-space: nowrap; /* Prevent content from wrapping inside table cells */
+}
+
+.portfolio-table thead,
+.portfolio-table tbody,
+.portfolio-table th,
+.portfolio-table td,
+.portfolio-table tr {
+  display: block; /* Make table elements block-level for stacking on small screens */
 }
 
 .portfolio-table th,
 .portfolio-table td {
-  border: 1px solid #ccc; /* Cell borders */
+  border: 1px solid #ccc;
   padding: 10px;
   text-align: left;
+  white-space: normal; /* Allow text to wrap within cells */
 }
 
 .portfolio-table th {
-  background-color: #ddd; /* Header background */
+  background-color: #ddd;
   font-weight: bold;
 }
 
-/* Remove old grid styles as they are no longer needed */
-/*
-#portfolio .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+.portfolio-table tbody tr {
+  margin-bottom: 15px; /* Space between rows when stacked */
+  border: 1px solid #aaa; /* Add a border to stacked rows */
 }
 
-.project-item {
-  border: 1px solid #ccc;
-  padding: 10px;
+.portfolio-table td:before {
+  /* Add labels for table cells in stacked view */
+  content: attr(data-label);
+  font-weight: bold;
+  display: inline-block;
+  width: 100px; /* Adjust as needed for label width */
+  margin-right: 10px;
 }
 
-.project-item img {
-  max-width: 100%;
-  height: auto;
+/* Hide table headers on small screens */
+.portfolio-table thead {
+  display: none;
 }
-*/
+
 
 footer {
   background-color: #333;
@@ -135,19 +177,104 @@ span.rev {
 }
 
 span.rev.email:before {
-  /* This will be the last part of the displayed email (reversed) */
-  content: "moc.liamg"; /* reversed "gmail.com" */
+  content: "moc.liamg";
 }
 span.rev.email:after {
-  /* This will be the first part of the displayed email (reversed) */
-  content: "@atsivsalocin"; /* reversed "nicolasvista@" */
+  content: "@atsivsalocin";
 }
 
 span.rev.phone:before {
-  /* This will be the last part of the displayed phone (reversed) */
-  content: "275350"; /* reversed "053572" */
+  content: "275350";
 }
 span.rev.phone:after {
-  /* This will be the first part of the displayed phone (reversed) */
-  content: " 7447 44+"; /* reversed "+44 7447 " */
+  content: " 7447 44+";
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens smaller than 768px (common tablet breakpoint) */
+@media (max-width: 768px) {
+  .container {
+    width: 95%; /* Use more width on smaller screens */
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  #hero h2 {
+    font-size: 2em;
+  }
+
+  .button {
+    padding: 8px 15px;
+    font-size: 0.9em;
+  }
+
+  /* Adjust table for smaller screens */
+  .portfolio-table {
+    white-space: normal; /* Allow text to wrap within table cells */
+  }
+
+  .portfolio-table thead {
+    display: none; /* Hide original table header */
+  }
+
+  .portfolio-table tbody tr {
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    display: block; /* Stack rows */
+  }
+
+  .portfolio-table td {
+    border: none; /* Remove individual cell borders when stacked */
+    border-bottom: 1px solid #eee; /* Add a subtle separator between stacked cells */
+    position: relative;
+    padding-left: 115px; /* Space for the data-label */
+  }
+
+  .portfolio-table td:last-child {
+    border-bottom: none; /* No border for the last cell in a stacked row */
+  }
+
+  .portfolio-table td:before {
+    position: absolute;
+    left: 10px;
+    width: 100px; /* Ensure label has enough space */
+    white-space: nowrap; /* Prevent label from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Add ellipsis if label is too long */
+  }
+}
+
+/* For screens smaller than 480px (common phone breakpoint) */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  #hero h2 {
+    font-size: 1.5em;
+  }
+
+  header nav ul li {
+    margin: 5px; /* Even less margin for very small screens */
+  }
+
+  header nav a {
+    font-size: 0.9em;
+  }
+
+  #about, #portfolio, #contact {
+    padding: 20px 0;
+  }
+
+  .portfolio-table td:before {
+    width: 80px; /* Adjust label width for very small screens */
+    padding-left: 5px;
+  }
+  .portfolio-table td {
+    padding-left: 95px; /* Adjust padding to match label width */
+  }
 }
