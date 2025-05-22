@@ -1,280 +1,114 @@
-/* Import PT Mono from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicolas De Freitas - Video Producer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-body {
-  font-family: 'PT Mono', monospace; /* Now using PT Mono as the primary font */
-  background-color: #f0f0f0; /* Light gray background */
-  color: #333; /* Dark gray text */
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; /* Ensure padding and border are included in element's total width and height */
-}
+    <header>
+        <div class="container">
+            <h1></h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-.container {
-  width: 80%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
-}
+    <section id="hero">
+        <div class="container">
+            <h2>Hi, I'm Nicolas De Freitas, a Freelance Video Producer</h2>
+            <p>With experience in camera operation, content production, and multiple roles across the video production pipeline.</p>
+            <a href="#portfolio" class="button">View My Work</a>
+        </div>
+    </section>
 
-header {
-  background-color: #ddd; /* Slightly darker gray for header */
-  padding: 10px 0;
-  border-bottom: 2px solid #aaa; /* A simple border */
-  position: relative;
-  overflow: hidden;
-}
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Currently a freelance video producer, with experience in camera op/content production and have worked in multiple roles in the video production pipeline, from handling high-end camera equipment to audio, and recording interviews. I am very motivated and enthusiastic with every project I'm a part of, making sure everything is done to the best of my abilities. I work well independently but also as a team and can follow tight deadlines within the brief.</p>
+            <h3>Key Skills:</h3>
+            <ul>
+                <li>Advanced experience on Final Cut Pro & Premiere Pro</li>
+                <li>Experience with Adobe Suite (Lightroom, Audition, Photoshop)</li>
+                <li>Fluent in Portuguese (native speaker)</li>
+                <li>Advanced MS Office suite experience</li>
+                <li>Camera Assistant (Blackmagic URSA Mini Pro 4.6K G2, Blackmagic Pocket Cinema Camera 6K Pro, Sony FX3, Sony a7iii, Sony FS-7)</li>
+                <li>Production Coordination & Management (Trello, Google Workspace)</li>
+                <li>Pre-production tasks (call sheets, consent forms, freelancer contact, kit management)</li>
+                <li>Monitoring job progress & process improvement</li>
+                <li>Editing Sizzle reels</li>
+                <li>On-set coordination & fast turnarounds</li>
+            </ul>
+        </div>
+    </section>
 
-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
+    <section id="portfolio">
+        <div class="container">
+            <h2>My Portfolio</h2>
+            <table class="portfolio-table">
+                <thead>
+                    <tr>
+                        <th>Project Title</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Sutton Council Lavender Fields Documentary</td>
+                        <td>Filmed B-roll and operated 2nd camera for interviews, capturing foley.</td>
+                    </tr>
+                    <tr>
+                        <td>Warner Bros Games - Gotham Knights TikTok Campaign</td>
+                        <td>Produced green screen shoot with talent in costume; coordinated crew and talent.</td>
+                    </tr>
+                    <tr>
+                        <td>The Heavy Heavy - Miles & Miles Music Video</td>
+                        <td>Produced and served as camera assistant for a low-budget music video with a high-budget look.</td>
+                    </tr>
+                    <tr>
+                        <td>SIGMA Tour Visuals & Social Channels</td>
+                        <td>Ad-hoc shooting for tour visuals and vox pops in central London.</td>
+                    </tr>
+                    <tr>
+                        <td>Moxy Marriott Hotel Socials Campaign</td>
+                        <td>Camera assistant and gaffer's assistant on a fast-paced two-day shoot.</td>
+                    </tr>
+                    <tr>
+                        <td>Mermaids Charity Social Channels Campaign</td>
+                        <td>Script supervisor and interviewer for Instagram content promoting LGBTIQA+ persons.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
 
-header h1 {
-  font-size: 2em;
-  margin: 0;
-  text-align: center; /* Center the title on small screens */
-  width: 100%; /* Take full width on small screens */
-  padding-bottom: 10px; /* Add some space below the title */
-}
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <p>Email: <span class="rev email"></span></p>
+            <p>Phone: <span class="rev phone"></span></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile (Please update)</a></p>
+            <p>GitHub: <a href="https://github.com/yourusername" target="_blank">github.com/yourusername (Please update)</a></p>
+        </div>
+    </section>
 
-header nav {
-  width: 100%; /* Take full width on small screens */
-  text-align: center; /* Center navigation on small screens */
-}
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Nicolas De Freitas. All rights reserved.</p>
+        </div>
+    </footer>
 
-header nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  justify-content: center; /* Center nav items */
-  flex-wrap: wrap; /* Allow nav items to wrap */
-}
+    <script>
+        // No ASCII animation script here
+    </script>
 
-header nav ul li {
-  margin: 5px 10px; /* Adjust margin for smaller screens */
-}
-
-header nav a {
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-  padding: 5px 0; /* Add padding for better touch targets */
-  display: block; /* Make links block-level for full touch area */
-}
-
-/* Styles for the ASCII name (removed from HTML, but keeping CSS for completeness if user adds it back) */
-#ascii-name {
-  position: absolute;
-  top: 10px;
-  right: 20px;
-  font-size: 0.7em;
-  line-height: 0.8;
-  color: #666;
-  opacity: 0.8;
-  transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-  transform-origin: center;
-  white-space: pre;
-  text-align: right;
-  /* Hide by default on smaller screens, can be re-enabled with media query if desired */
-  display: none;
-}
-
-
-#hero {
-  background-color: #e0e0e0;
-  padding: 50px 0;
-  text-align: center;
-}
-
-#hero h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
-}
-
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #333;
-  color: #fff;
-  text-decoration: none;
-  border: 2px solid #333;
-  border-radius: 0;
-  font-weight: bold;
-}
-
-#about, #portfolio, #contact {
-  padding: 40px 0;
-}
-
-/* Styles for the portfolio table */
-.portfolio-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-  border: 1px solid #ccc;
-  display: block; /* Make table a block to allow horizontal scrolling on small screens */
-  overflow-x: auto; /* Enable horizontal scrolling for table on small screens */
-  white-space: nowrap; /* Prevent content from wrapping inside table cells */
-}
-
-.portfolio-table thead,
-.portfolio-table tbody,
-.portfolio-table th,
-.portfolio-table td,
-.portfolio-table tr {
-  display: block; /* Make table elements block-level for stacking on small screens */
-}
-
-.portfolio-table th,
-.portfolio-table td {
-  border: 1px solid #ccc;
-  padding: 10px;
-  text-align: left;
-  white-space: normal; /* Allow text to wrap within cells */
-}
-
-.portfolio-table th {
-  background-color: #ddd;
-  font-weight: bold;
-}
-
-.portfolio-table tbody tr {
-  margin-bottom: 15px; /* Space between rows when stacked */
-  border: 1px solid #aaa; /* Add a border to stacked rows */
-}
-
-.portfolio-table td:before {
-  /* Add labels for table cells in stacked view */
-  content: attr(data-label);
-  font-weight: bold;
-  display: inline-block;
-  width: 100px; /* Adjust as needed for label width */
-  margin-right: 10px;
-}
-
-/* Hide table headers on small screens */
-.portfolio-table thead {
-  display: none;
-}
-
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 20px 0;
-}
-
-/* CSS Obfuscation for Email and Phone */
-span.rev {
-  unicode-bidi: bidi-override;
-  direction: rtl;
-}
-
-span.rev.email:before {
-  content: "moc.liamg";
-}
-span.rev.email:after {
-  content: "@atsivsalocin";
-}
-
-span.rev.phone:before {
-  content: "275350";
-}
-span.rev.phone:after {
-  content: " 7447 44+";
-}
-
-/* Media Queries for Responsiveness */
-
-/* For screens smaller than 768px (common tablet breakpoint) */
-@media (max-width: 768px) {
-  .container {
-    width: 95%; /* Use more width on smaller screens */
-    padding: 15px;
-  }
-
-  header h1 {
-    font-size: 1.8em;
-  }
-
-  #hero h2 {
-    font-size: 2em;
-  }
-
-  .button {
-    padding: 8px 15px;
-    font-size: 0.9em;
-  }
-
-  /* Adjust table for smaller screens */
-  .portfolio-table {
-    white-space: normal; /* Allow text to wrap within table cells */
-  }
-
-  .portfolio-table thead {
-    display: none; /* Hide original table header */
-  }
-
-  .portfolio-table tbody tr {
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-    display: block; /* Stack rows */
-  }
-
-  .portfolio-table td {
-    border: none; /* Remove individual cell borders when stacked */
-    border-bottom: 1px solid #eee; /* Add a subtle separator between stacked cells */
-    position: relative;
-    padding-left: 115px; /* Space for the data-label */
-  }
-
-  .portfolio-table td:last-child {
-    border-bottom: none; /* No border for the last cell in a stacked row */
-  }
-
-  .portfolio-table td:before {
-    position: absolute;
-    left: 10px;
-    width: 100px; /* Ensure label has enough space */
-    white-space: nowrap; /* Prevent label from wrapping */
-    overflow: hidden;
-    text-overflow: ellipsis; /* Add ellipsis if label is too long */
-  }
-}
-
-/* For screens smaller than 480px (common phone breakpoint) */
-@media (max-width: 480px) {
-  header h1 {
-    font-size: 1.5em;
-  }
-
-  #hero h2 {
-    font-size: 1.5em;
-  }
-
-  header nav ul li {
-    margin: 5px; /* Even less margin for very small screens */
-  }
-
-  header nav a {
-    font-size: 0.9em;
-  }
-
-  #about, #portfolio, #contact {
-    padding: 20px 0;
-  }
-
-  .portfolio-table td:before {
-    width: 80px; /* Adjust label width for very small screens */
-    padding-left: 5px;
-  }
-  .portfolio-table td {
-    padding-left: 95px; /* Adjust padding to match label width */
-  }
-}
+</body>
+</html>
