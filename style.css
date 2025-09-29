@@ -1,8 +1,7 @@
-/* Import PT Mono from Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=PT+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
 
 body {
-  font-family: 'PT Mono', monospace; /* Now using PT Mono as the primary font */
+  font-family: 'Playfair Display', serif;
   background-color: #f0f0f0; /* Light gray background */
   color: #333; /* Dark gray text */
   line-height: 1.6;
@@ -79,7 +78,6 @@ header nav a {
   transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   transform-origin: center;
   white-space: pre;
-  text-align: right;
   /* Hide by default on smaller screens, can be re-enabled with media query if desired */
   display: none; /* Keeping this hidden as it was removed from HTML */
 }
